@@ -1,10 +1,32 @@
 # Smart Contract Raffle
 
-![front end](./public/images/smart-contract-raffle-frontend.gif)
+The working app can be viewed [here](https://nextjs-smart-contract-raffle.vercel.app/).
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+You can enter the raffle using a Rinkeby test net, or if you want you can spin a hardhat node locally and enter the raffle as well.
 
-## Getting Started
+![front end](./public/images/front-end.png)
+
+## My learnings
+
+I did this project while completing Patrick Collin's blockchain tutorial.
+
+This dApp has taught me a ton of things:
+
+1. How to get actual verifiable random numbers. This really helps us to choose a lottery winner without any form of bias
+
+2. How to use chainlink keepers to automate smart contracts.
+
+3. How to write proper testing scripts.
+
+4. How to deploy the smart contract regardless of the network we are on.
+
+5. How to make a user interactable web application and connect it to a smart contract.
+
+---
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The styling has been done using Tailwind CSS.
+
+### Getting Started
 
 First, run the development server:
 
