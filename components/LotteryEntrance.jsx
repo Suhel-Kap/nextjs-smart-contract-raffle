@@ -11,6 +11,7 @@ export default function LotteryEntrace() {
     const [entranceFee, setEntranceFee] = useState("0")
     const [numPlayers, setNumPlayers] = useState("0")
     const [recentWinner, setRecentWinner] = useState("0")
+    const [contractBalance, setContractBalance] = useState("0")
 
     const dispatch = useNotification()
 
@@ -80,7 +81,6 @@ export default function LotteryEntrace() {
     return (
         <div className="px-5 py-5 font-normal sm:px-2">
             <h1 className="text-2xl font-medium my-3">Lottery</h1>
-            <div>{`Current chainId : ${chainId}`}</div>
             {raffleAddress ? (
                 <div>
                     <button
@@ -119,7 +119,7 @@ export default function LotteryEntrace() {
                             <div>Enter Raffle</div>
                         )}
                     </button>
-
+                    <div className="my-2">{`Current network : ${contractAddresses[chainId][1]}`}</div>
                     <div className="my-2">
                         Entrace Fee: {ethers.utils.formatEther(entranceFee)} ETH
                     </div>
@@ -131,6 +131,17 @@ export default function LotteryEntrace() {
                     <p>No Raffle Address detected</p>
                 </div>
             )}
+            <div>
+                See contract on{" "}
+                <a
+                    href="https://rinkeby.etherscan.io/address/0x0E1b841033bf44fC8559ba0f991c46c7AD4dBe94"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 underline"
+                >
+                    Rinkeby Etherscan
+                </a>
+            </div>
         </div>
     )
 }
